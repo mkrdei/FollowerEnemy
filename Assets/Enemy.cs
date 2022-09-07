@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    CharacterController characterController;
-    Rigidbody rb;
+    private Rigidbody rb;
     private GameObject player;
     [SerializeField]
     private float distanceToAttack = 5f;
@@ -16,7 +15,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        characterController = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
         spawnPoint = transform.position;
     }

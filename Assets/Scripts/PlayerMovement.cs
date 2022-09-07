@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Transform spawnPoint;
+    [SerializeField]
+    private Transform spawnPoint;
     private Rigidbody rb;
     protected Joystick joystick;
     private Vector3 movementDirection;
